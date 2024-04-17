@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete List</title>
+</head>
+<body>
+    <h1>리스트 삭제</h1>
+    <form method="post"> <!-- POST 메소드를 사용하여 리스트 삭제 -->
+        {% csrf_token %} <!-- 보안 강화 -->
+        <button type="submit">삭제</button> <!-- 삭제 버튼 -->
+    </form>
+    <a href="{% url 'display_list' %}">취소</a> <!-- 삭제 취소 -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do-List</title>
+</head>
+<body>
+    <h1>To-Do 리스트</h1>
+    <ul>
+        {% for todo in todoList %} <!-- todoList 리스트의 각 항목에 대해 반복-->
+            <li>{{ todo.title }}<a href="{% url 'delete_list' todo.pk %}"> (삭제)</li> <!-- todo 리스트와 삭제 버튼 -->
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_list' %}">리스트 추가</a> <!-- 새로운 To-Do 리스트 추가 링크-->
+</body>
+</html>
